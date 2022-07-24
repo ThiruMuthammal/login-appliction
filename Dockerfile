@@ -1,13 +1,7 @@
-FROM node:16
+FROM nginx
 
-WORKDIR /app
+COPY . /usr/share/nginx/html
 
-COPY ["package.json","package-lock-json*","./"]
-
-RUN npm install
-
-COPY . .
-
+# Expose $PORT on container.
+# We use a varibale here as the port is something that can differ on the environment.
 EXPOSE 80
-
-CMD ["node","index.js"]
