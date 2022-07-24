@@ -19,7 +19,7 @@ services:
   web:
         container_name: login-app-web
         image: login-app-web:v1
-        build: D:\ResponsiveDesign Login and Register UI
+        build: D:\Thiru\ResponsiveDesign Login and Register UI
         ports:
           - "4200:80"
         depends_on: 
